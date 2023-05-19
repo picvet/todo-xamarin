@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Notes.Views.FlyoutPages;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,7 @@ namespace Notes
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NotesFlyoutPage();
         }
 
         protected override void OnStart()

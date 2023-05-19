@@ -9,13 +9,17 @@
         <local1:TodoListViewModel />
     </ContentPage.BindingContext>
 
-    <StackLayout>
+    <StackLayout Margin="40">
         <Entry
             Text="{Binding NewTodoInputValue}"
             x:Name="inputField"
             Placeholder="Enter a todo"
             ReturnCommand="{Binding AddTodoCommand}"
             />
+
+        <Button Text="SAVE"
+                FontSize="Large"
+                Command="{Binding AddTodoCommand, Mode=TwoWay}" />
 
         <ListView x:Name="TodoList"
                  ItemsSource="{Binding TodoItems}" >
@@ -32,7 +36,7 @@
                                 <FlexLayout AlignItems="Center">
                                     <input:CheckBox IsChecked="{Binding Complete}" />
 
-                                    <Label Text="{Binding TodoText}" FontSize="Large" />
+                                    <Label Text="{Binding TodoText}" Margin="10,0,0,0" FontSize="Large" />
                                 </FlexLayout>
                             </ContentView>
 
